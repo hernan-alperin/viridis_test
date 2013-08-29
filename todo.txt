@@ -1,0 +1,6 @@
+parse the text file to find job name, list of skills
+using python requests, send a query to onetonline.org to return list of matching jobs
+parse returned html to a usable python object (lxml?)
+filter jobs based on targeted industry.
+return results.
+
