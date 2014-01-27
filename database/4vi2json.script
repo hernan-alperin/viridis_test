@@ -1,0 +1,8 @@
+:%s/INSERT INTO "job" VALUES(\('[^']*'\),\('[^']*'\),\('[^']*'\))/{'job_code':\1, 'job_name':\2, 'industry_name':\3}
+
+# generally
+:%s/INSERT INTO "job_feature" VALUES(\('[^']*'\),\('[^']*'\),\('[^']*'\),\('[^']*'\),\([^)]*\))/{'job_code':\1, 'job_feature_group':\2, 'job_feature_category':\3, 'job_feature_description':\4, 'job_feature_value':\5}/
+
+# and for those where ' comes into the sring
+:%s/INSERT INTO "job_feature" VALUES(\([^,]*\),\([^,]*\),\([^,]*\),\([^,]*\),\([^)]*\))/{'job_code':\1, 'job_feature_group':\2, 'job_feature_category':\3, 'job_feature_description':\4, 'job_feature_value':\5}/
+
